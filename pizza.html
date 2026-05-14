@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice Heaven | Authentic Wood-Fired Pizza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100vh; overflow: hidden; font-family: 'Poppins', sans-serif; background: #000; }
+
+        .pizza-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Shokh Dark Wood Texture Background */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=2000') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        .main-card {
+            width: 95%;
+            max-width: 1150px;
+            height: 80vh;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 30px;
+            display: flex;
+            box-shadow: 0 50px 100px rgba(231, 76, 60, 0.3);
+            overflow: hidden;
+            border: 2px solid #e74c3c;
+            position: relative;
+        }
+
+        /* Left Side: Bold Content */
+        .info-panel {
+            flex: 1.2;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        .hot-tag {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 900;
+            width: fit-content;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 6rem;
+            line-height: 0.85;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        h1 span {
+            color: #e74c3c;
+            display: block;
+            -webkit-text-stroke: 1px white;
+        }
+
+        p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            max-width: 450px;
+        }
+
+        .order-btn {
+            padding: 20px 50px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            width: fit-content;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .order-btn:hover {
+            background: #fff;
+            color: #e74c3c;
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        /* Right Side: Visual Pizza Image */
+        .visual-panel {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .pizza-pic {
+            width: 150%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070') no-repeat center center/cover;
+            transition: 1s ease-in-out;
+            transform: rotate(15deg);
+        }
+
+        .main-card:hover .pizza-pic {
+            transform: rotate(0deg) scale(1.2);
+        }
+
+        /* Decorative Smoke Effect */
+        .smoke {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent, rgba(231, 76, 60, 0.1));
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pizza-wrapper">
+        <div class="main-card">
+            <div class="smoke"></div>
+
+            <!-- Content Area -->
+            <div class="info-panel">
+                <div class="hot-tag">Hot & Fresh</div>
+                <h1>Perfect <br><span>Crust.</span></h1>
+                <p>Authentic wood-fired pizzas made with hand-picked ingredients and 100% fresh mozzarella. The ultimate taste in every slice.</p>
+                
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+
+            <!-- Visual Area -->
+            <div class="visual-panel">
+                <div class="pizza-pic"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
